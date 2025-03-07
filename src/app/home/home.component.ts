@@ -14,10 +14,10 @@ export class HomeComponent {
   }
 
   giftImages = [
-    { src: '/assets/images/article1.jpg', alt: 'Handmade Jewelry' },
-    { src: '/assets/images/article2.jpg', alt: 'Customized Mugs' },
-    { src: '/assets/images/article3.jpg', alt: 'Photo Frames' },
-    { src: '/assets/images/article4.jpg', alt: 'Scented Candles' }
+    { src: '/assets/images/article1.jpg', alt: 'article1' },
+    { src: '/assets/images/article2.jpg', alt: 'article2' },
+    { src: '/assets/images/article3.jpg', alt: 'article3' },
+    { src: '/assets/images/article4.jpg', alt: 'article4' }
   ];
   currentIndex = 0;
 
