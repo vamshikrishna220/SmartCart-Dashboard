@@ -1,15 +1,36 @@
 <div class="gift-items-container">
+  <h2>Gift Ideas</h2>
+  <div class="cart-container" *ngIf="cart.length > 0">
+    <h2>Shopping Cart</h2>
+    <ul>
+      <li *ngFor="let item of cart" class="cart-item">
+        <h3>{{ item.name }}</h3>
+        <p><strong>Price:</strong> ${{ item.price }}</p>
+        <p><strong>Quantity:</strong>
+          <button (click)="removeFromCart(item)" class="quantity-btn">-</button>
+          {{ item.quantity }}
+          <button (click)="addToCart(item)" class="quantity-btn">+</button>
+        </p>
+      </li>
+    </ul>
+    <h3 class="total-price">Total Price: ${{ totalPrice }}</h3>
+  </div>
   <ul>
-    <li *ngFor="let gift of giftItems">
+    <li *ngFor="let gift of giftItems" class="gift-item">
       <img [src]="gift.image" [alt]="gift.name" class="gift-image">
       <div class="gift-details">
-        <p>{{ gift.id }}  </p>
-        <h3>{{ gift.name }} </h3>
-        <p><strong>Price:</strong> {{ gift.price }}</p>
+        <h3>{{ gift.name }}</h3>
+        <p><strong>Price:</strong> ${{ gift.price }}</p>
         <p><strong>Details:</strong> {{ gift.details }}</p>
         <p><strong>Available Colors:</strong> {{ gift.color }}</p>
+        <p><strong>Quantity:</strong>
+          <button (click)="removeFromCart(gift)" class="quantity-btn">-</button>
+          {{ getCartQuantity(gift.id) }}
+          <button (click)="addToCart(gift)" class="quantity-btn">+</button>
+        </p>
+        <button (click)="addToCart(gift)" class="add-cart-btn">Add to Cart</button>
       </div>
     </li>
-  <h3>Please check with us for more Gift Ideas</h3>
   </ul>
+
 </div>
