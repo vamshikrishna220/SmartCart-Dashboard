@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" class="header-container">
+  <div class="brand-container">
+    <span class="brand-name">Shiya Elegant Finds</span>
+  </div>
+</mat-toolbar>
+<mat-toolbar color="accent" class="nav-menu">
+  <a mat-button *ngFor="let item of menuItems" (click)="onSelect(item)">{{ item.label }}</a>
+</mat-toolbar>

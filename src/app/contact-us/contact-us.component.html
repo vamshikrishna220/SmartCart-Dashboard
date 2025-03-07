@@ -1,0 +1,19 @@
+<div class="contact-us-container">
+    <h2>Contact Us</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" formControlName="fullName" required>
+      <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="error">Full Name is required.</div>
+  
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" formControlName="phoneNumber" required>
+      <div *ngIf="contactForm.get('phoneNumber')?.invalid && contactForm.get('phoneNumber')?.touched" class="error">Enter a valid 10-digit phone number.</div>
+  
+      <label for="message">Message:</label>
+      <textarea id="message" formControlName="message" required></textarea>
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">Message is required.</div>
+  
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+    <p *ngIf="formSubmitted" class="success">Your message has been sent successfully!</p>
+  </div>

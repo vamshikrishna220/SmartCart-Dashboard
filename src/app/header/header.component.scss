@@ -1,0 +1,25 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background-color:darkseagreen;
+  font-style: italic;
+
+}
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 36px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.nav-menu {
+  background-color:darkseagreen;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  color: indigo;
+  font-weight:500;
+}

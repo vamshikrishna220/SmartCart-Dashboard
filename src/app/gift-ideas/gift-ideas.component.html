@@ -1,0 +1,15 @@
+<div class="gift-items-container">
+  <ul>
+    <li *ngFor="let gift of giftItems">
+      <img [src]="gift.image" [alt]="gift.name" class="gift-image">
+      <div class="gift-details">
+        <p>{{ gift.id }}  </p>
+        <h3>{{ gift.name }} </h3>
+        <p><strong>Price:</strong> {{ gift.price }}</p>
+        <p><strong>Details:</strong> {{ gift.details }}</p>
+        <p><strong>Available Colors:</strong> {{ gift.color }}</p>
+      </div>
+    </li>
+  <h3>Please check with us for more Gift Ideas</h3>
+  </ul>
+</div>
